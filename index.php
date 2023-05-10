@@ -34,6 +34,7 @@
                 <?php 
                     $contador = 0;
                     var_dump($datos);
+                    $datos = json_decode($datos);
                     foreach($datos as $item){
                         if($contador < 8){
                 ?>
