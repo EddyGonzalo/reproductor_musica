@@ -1,6 +1,6 @@
 <?php 
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/reproductor_musica/vendor/autoload.php";
-
+   // require_once $_SERVER['DOCUMENT_ROOT'] . "/reproductor_musica/vendor/autoload.php";
+    require_once "./reproductor_musica/vendor/autoload.php";
     class Conexion {
         public function conectar() {
             try {
