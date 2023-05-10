@@ -5,17 +5,21 @@
     class Crud extends Conexion{
         public function songs()
         {
-            try{
+            try {
                 $conexion = parent::conectar();
                 $coleccion = $conexion->songs;
                 $datos = $coleccion->find();
-                return $datos;
                 $datos1 = $coleccion->find();
-                return $datos1;
-            }catch (\Throwable $th){
+                $resultados = [
+                    'datos' => $datos,
+                    'datos1' => $datos1
+                ];
+                return $resultados;
+            } catch (\Throwable $th) {
                 return $th->getMessage();
             }
         }
+
 
     }
 ?>
