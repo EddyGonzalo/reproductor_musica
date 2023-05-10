@@ -5,21 +5,23 @@
     class Crud extends Conexion{
         public function songs()
         {
-            try {
+            try{
                 $conexion = parent::conectar();
+                if (!$conexion) {
+                    throw new Exception("Error de conexión a la base de datos.");
+                }
                 $coleccion = $conexion->songs;
+                if (!$coleccion) {
+                    throw new Exception("No se encontró la colección de canciones.");
+                }
                 $datos = $coleccion->find();
+                return $datos;
                 $datos1 = $coleccion->find();
-                $resultados = [
-                    'datos' => $datos,
-                    'datos1' => $datos1
-                ];
-                return $resultados;
-            } catch (\Throwable $th) {
+                return $datos1;
+            } catch (\Throwable $th){
                 return $th->getMessage();
             }
         }
-
 
     }
 ?>
