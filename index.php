@@ -4,7 +4,7 @@
     $crud = new Crud();
     $datos = $crud->songs();
     $datos1 = $crud->songs();
-    //print_r($datos);
+    print_r($datos);
 ?>
 
 <!DOCTYPE html>
