@@ -33,6 +33,7 @@
         <div class="menu_song">
                 <?php 
                     $contador = 0;
+                    var_dump($datos);
                     foreach($datos as $item){
                         if($contador < 8){
                 ?>
@@ -140,6 +141,7 @@
             </div>
             <div class="pop_song">
                 <?php 
+                    var_dump($datos1);
                     foreach($datos1 as $item){
                 ?>
                 <li class="songItem">
